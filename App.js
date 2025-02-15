@@ -25,30 +25,17 @@ const categories = [
 
 export default function App() {
   const [category, setCategory] = useState();
+
   return (
     <Screen>
       <AppPicker
         selectedItem={category}
-        onsSelectItem={(item) => setCategory(item)}
+        onSelectItem={(item) => setCategory(item)} // Fixed typo
         items={categories}
         icon="apps"
         placeholder="Category"
       />
       <AppTextInput placeholder="Email" icon="email" />
     </Screen>
-    // <ListingScreens />
-    // <AccountScreen />
-    // <Screen>
-    //   <ListItem
-    //     title="My title"
-    //     // subTitle="my subTitle"
-    //     ImageComponent={<Icon name="email" />}
-    //   />
-
-    // {/* <Icon name="email" size={50} /> */}
-    // </Screen>
-    // <GestureHandlerRootView style={{ flex: 1 }}>
-    //   <MessagesScreen />
-    // </GestureHandlerRootView>
   );
 }
